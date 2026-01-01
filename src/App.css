@@ -1,1 +1,77 @@
-/* Add your custom css here */
+/* universal selector */
+* {
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body {
+  margin: 0;
+  color: #000000;
+}
+
+/* Background image with fade */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url("./house.jpg");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.15; /* controls fade */
+  z-index: -1;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;   /* stack vertically */
+  align-items: center;
+  padding-top: 2rem;        /* keeps h1 at top */
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Form spacing */
+label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem; /* separates balance & rate */
+  font-weight: 500;
+}
+
+input,
+select {
+  margin-top: 0.4rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 250px;
+}
+
+button {
+  margin-top: 1rem;
+  padding: 0.6rem;
+  font-size: 1rem;
+  font-weight: 600;
+  background-color: #4f46e5;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #4338ca;
+}
+
+#output {
+  margin-top: 1.5rem;
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 600;
+  background-color: #4338ca;
+}
